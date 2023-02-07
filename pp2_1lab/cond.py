@@ -12,5 +12,6 @@ else:
   if  x>10:
     print("over 10")
   else:
+
     print("less 10")
 
