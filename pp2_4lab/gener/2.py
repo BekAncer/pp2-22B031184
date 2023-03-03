@@ -6,4 +6,4 @@ def gen_even(n, k = 0):
 n = int(input())
 gen = gen_even(n)
 for i in gen:
-    print(i, end = ' ')
+    print(i, end = ',')
