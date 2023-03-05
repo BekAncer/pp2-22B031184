@@ -3,7 +3,7 @@ import re
  
 s = input()
 
-pattern = r'a(b*)'
+pattern = r'a(b?)'
 res = re.search(pattern, s)
 
 if res:
