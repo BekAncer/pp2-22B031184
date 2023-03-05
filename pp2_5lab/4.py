@@ -2,7 +2,7 @@
 import re 
 
 s = input() 
-pattern = r'[A-Z]+[a-z]+' 
+pattern = r'[A-Z][a-z]+' 
  
 ls = re.findall(pattern, s) 
 print(*ls)
