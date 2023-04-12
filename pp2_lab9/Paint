@@ -4,7 +4,7 @@ import math
 import numpy  as np
 from DATA import *#importing some data from DATA file
 pygame.init()#pygame methods functions initialization
-pygame.display.set_caption("PainT_Ilyasa")# name progr
+pygame.display.set_caption("Paint")
 font = pygame.font.SysFont('Verdana', 11)#text style for buttons 
 font1 = pygame.font.SysFont('Verdana', 20)#text stylw for text that used in opening file and saving
 scr = pygame.display.set_mode((WIDTH,HEIGHT))#screen creating
@@ -269,7 +269,7 @@ b9 = Button(100,50,27,10,BLUE)
 
 drawload = False
 filename = ""
-file_dir = "C:\\Users\\User\\Desktop\\Программирование\\my\\pp2-22B030391\\tsis9\\3\\Images"
+file_dir = r"C://Users//Марина//Desktop//kbtu//pp2-22B031184//pp2_lab9//Images//"
 files_list = os.listdir(file_dir)#list of files in Images 
 widt = 1#standart width and color
 colo = RED
@@ -406,13 +406,13 @@ while run:#game loop
     if i == 1:
         try:
             objects = []#clear image that was before
-            imag = pygame.image.load("C:\\Users\\User\\Desktop\\Программирование\\my\\pp2-22B030391\\tsis9\\3\\Images\\"+str(filename)+".png")
+            imag = pygame.image.load(r"C://Users//Марина//Desktop//kbtu//pp2-22B031184//pp2_lab9//Images// "+str(filename)+".png")
             drawload = True
         except FileNotFoundError: 
             drawload = False  
         i = 0# closing "opening" surface
     if j == 1:#same for "saving"
-        pygame.image.save(canv, "C:\\Users\\User\\Desktop\\Программирование\\my\\pp2-22B030391\\tsis9\\3\\Images\\"+str(filename)+".png")
+        pygame.image.save(canv,r"C://Users//Марина//Desktop//kbtu//pp2-22B031184//pp2_lab9//Images// "+str(filename)+".png")
         j = 0  
     clock.tick(FPS)#set time 
     pygame.display.flip()#updating all screen
